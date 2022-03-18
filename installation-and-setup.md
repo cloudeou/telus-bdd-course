@@ -138,6 +138,8 @@ The last thing to do is initialize git for your project:
 node_modules/
 # node-waf configuration
 package-lock.json
+# build directory
+dist/
 ```
 
 **Congrats, you have finished project setup with npm, BDD Framework, Typescript and git**
