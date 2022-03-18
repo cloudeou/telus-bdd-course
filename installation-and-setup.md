@@ -6,6 +6,8 @@
 
 In this section you will discover how to set up your workspace with BDD framework.
 
+[![N|Solid](https://cdn4.iconfinder.com/data/icons/48-bubbles/48/23.Videos-512.png)][Session video recording](https://drive.google.com/file/d/1wM_Fi1bEGYqYrdeNhSxLSDurDqwFUZQg/view?usp=sharing)
+
 #### Contents:
 
 1. [Installation using npm](#installation-using-npm)
