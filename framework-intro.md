@@ -6,6 +6,8 @@
 
 In this section you will discover how to set up your workspace with BDD framework.
 
+<img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/23.Videos-512.png" width="30px" margin-top="15px"/> [Session video recording](https://drive.google.com/file/d/1mjL3v4qyBD0L0VsVoJi3aSnfL7Sswv7V/view?usp=sharing)
+
 #### Contents:
 
 1. [Work directory walkthrough](#work-directory-walkthrough)
