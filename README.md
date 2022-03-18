@@ -6,7 +6,7 @@
 
 This repository is created to host training course for BDD framework.
 Here you can find text explanations with code examples.
-Please follow the [link](/README.md) to find session recordings corresponding to the sections of this course.
+Please follow the [link](https://drive.google.com/drive/folders/16oluCHsTllAlsKrih7rED-RLZ7YzlPT7?usp=sharing) to find session recordings corresponding to the sections of this course.
 
 #### Contents:
 
