@@ -10,7 +10,7 @@ In this section you will learn what are steps and how to create them, how to cre
 
 1. Steps definition and structure
 2. Steps file, creation best practice
-3. Steps container and steps creation
+3. Steps container and steps creation code requirements
 4. String stepmatcher parametrization
 5. Regex stepmatcher parametrization
 6. Table parameter
