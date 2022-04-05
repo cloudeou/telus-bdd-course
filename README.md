@@ -20,6 +20,7 @@ Please follow the [link](https://drive.google.com/drive/folders/16oluCHsTllAlsKr
 8. [Using Contexts](/contexts.md)
 9. [Database Bootstrap](/database-bootstrap.md)
 10. [CLI usage](/cli-usage.md)
+11. [Multithread execution, use of threads](/threads.md)
 11. [Advanced dataset usage](/advanced-dataset-usage.md)
 12. [Dependent features mechanism](/dependent-features.md)
 13. [Reporting with uReport integration](/reporting-ureport-integration.md)
