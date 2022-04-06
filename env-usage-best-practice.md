@@ -6,7 +6,7 @@
 
 In this section you will understand why environments are used and learn best practices to implement environments usage for the framework.
 
-<img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/23.Videos-512.png" width="30px" margin-top="15px"/> [Session video recording]()
+<img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/23.Videos-512.png" width="30px" margin-top="15px"/> [Session video recording](https://drive.google.com/file/d/1TeUHsnBO7655zaV_X3BRvVdBEOVCx4W9/view?usp=sharing)
 
 [<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30px"> Code Example](https://github.com/telus/bdd-demo/tree/master/src/env-config)
 
@@ -89,9 +89,10 @@ Let's create a standard js module, that will manage envs based on framefork proc
 
 > Creation of this module will be automated in future versions, but it's structure and configuration will remain the same.
 
-1. First you need to create `env-config` folder inside root directory of the project. Inside of this directory you need to create a number of `.ts/js` files that correspond to your environments (they should be named the same as envs) and `index.ts/js` file.
+1. First you need to create `env-config` folder inside `src` directory of the project. Inside of this directory you need to create a number of `.ts/js` files that correspond to your environments (they should be named the same as envs) and `index.ts/js` file.
 
 ```
+src
 |
 └─── env-config
         index.ts
