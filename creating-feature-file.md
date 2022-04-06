@@ -8,6 +8,8 @@ In this section you will learn what are feature files, how to properly and convi
 
 <img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/23.Videos-512.png" width="30px" margin-top="15px"/> [Session video recording]()
 
+[<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30px"> Code Example](https://github.com/telus/bdd-demo/blob/master/bdd/features/productInventory.feature)
+
 #### Contents:
 
 1. [Feature file definition](#feature-file-definition)
