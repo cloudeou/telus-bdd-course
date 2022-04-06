@@ -8,6 +8,9 @@ In this section you will understand why environments are used and learn best pra
 
 <img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/23.Videos-512.png" width="30px" margin-top="15px"/> [Session video recording]()
 
+[<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30px"> Code Example](https://github.com/telus/bdd-demo/tree/master/src/env-config)
+
+
 #### **Contents**:
 
 1. [Environments usage profit](#environments-usage-profit)
