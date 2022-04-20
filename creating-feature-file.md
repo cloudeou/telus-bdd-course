@@ -37,7 +37,7 @@ Feature file is
 Feature: Test new db bootstrap with dataset id from cli # feature title
 
   Scenario: Set migration data     # scenario title
-    Given set customer ecid: @ecid   # action words
+    Given set customer ecid: @ecid   # steps
     And set customer lpdsid: @lpdsid #
 
   Scenario: Make Product inventory call
@@ -62,9 +62,9 @@ Feature file parts are:
 - *scenario title*
 
     Title of the scenario, it is used in logs and results.
-- *action words*
+- *steps*
 
-    Action words are the building blocks of feature files, automation flows are described with them, action words correspond to real javascript functions that are executed in runtime.
+    Steps (action words) are the building blocks of feature files, automation flows are described with them, action words correspond to real javascript functions that are executed in runtime.
     Action words start from *key words (Given, When, Then, And)*.
     Action words can be parametrized in two ways with a single parameter and with a table.
 
