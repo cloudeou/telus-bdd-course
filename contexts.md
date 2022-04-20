@@ -92,3 +92,29 @@ export default class PIContext {
 }
 ```
 #### **featureContext util usage**
+To access contexts in step files you should use a special built in util `featureContext`. 
+
+1. To use it you first need to import it from the framework, also inport identificators file, we would need it to access the context.
+```typescript
+const { featureContext } = require("@telus-bdd/telus-bdd");
+import { Identificators } from "../contexts/Identificators";
+```
+2. **INSIDE OF** steps container function, create a function that will call the utils `getContextById` method to fetch context from the framework y its id:
+```typescript
+export const PISteps: StepDefinitions = ({ given, and, when, then }) => {
+  const PIContext = (): PIContext =>
+    featureContext().getContextById(Identificators.PIContext);
+    // ...
+}
+```
+3. Call created function inside of step definition callbacks to access context data:
+```typescript
+and(/^set customer (.*): (.*)$/, (paramName, paramValue) => {
+    console.log(`Setting ${paramName} to ${paramValue}`);
+    switch (paramName) {
+      case "ecid":
+        return (PIContext().ecid = paramValue);
+      case "lpdsid":
+        return (PIContext().lpdsid = paramValue);
+}
+``` 
