@@ -158,37 +158,5 @@ A general sequence of framework execution is:
 BDD framework also supports multiple threads execution, it can stabely work with up to 100 parallel threads with according hardware.
 It uses process level scaling to create parallel workers, usinf processes for scaling allows to have **totally isolated environment for each worker**, this reduces risks of data collisions or other possible problems.
 
-Framework has two binaries (commands) inside of the package that you can use in CLI: `bdd-init` and `bdd`
+Framework has two binaries (commands) inside of the package that you can use in CLI: `bdd-init` and `bdd`. You can read more about them [here](/cli-usage.md).
 
-Framework is launched using cli binary `bdd`, located inside of the framework package.
-You can pass many arguments to this command:
-
-- location to framework files and directories as in `bdd.config` (argument values would be prioritized over config file values)
-- database bootstrap related arguments
-- dependent features and uReport arguments
-
-Full list can be seen by running `bdd --help` or `npx bdd --help`:
-
-```
-npx bdd --help
-Usage: runner.js [options]
-
-Options:
-      --featuresPath   Path to features folder                          [string]
-      --stepsPath      Path to steps folder. Specify path to dist/* for
-                       TypeScript projects.                             [string]
-      --envsPath
-      --contextsPath   Path to contexts folder. Specify path to dist/* for
-                       TypeScript projects.                             [string]
-      --threadsNumber  Number of processes to run in parallel           [number]
-      --testOrderPath  Path to tests order config file                  [string]
-      --bootstrapPath  Path to custom bootstrap config file             [string]
-      --config         Path to non-default config file                  [string]
-      --suiteName      Identification tag of features to launch.        [string]
-      --bddEnv         Framework launch environment name
-      --runTimes       Customer number of run times                     [number]
-      --useUReport     Should the framework generate and send reports to uReport
-                       Platform.(Specify config in bdd.config for that)[boolean]
-      --dataset        Id of dataset to use                             [number]
-  -h, --help           Show help                                       [boolean]
-```
