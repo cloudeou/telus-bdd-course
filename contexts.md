@@ -62,7 +62,7 @@ In this approach each context data point is implemented with public field or pri
 export default class PIContext {
   public identificator = Identificators.PIContext;
   private _ecid: string = "";
-  public _response: { [key: string]: any } = {}; // public data point
+  public response: { [key: string]: any } = {}; // public data point
   private _status_code: number = 0;
 
   // just plain getter/setter  
