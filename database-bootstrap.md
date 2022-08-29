@@ -1,10 +1,10 @@
-### BDD framework training. Daatabase Bootstrap
+### BDD framework training. Database Bootstrap
 
 [![N|Solid](https://images.ctfassets.net/fikanzmkdlqn/5NoHRB1q6lrNzSSpekhrG5/cf22f3d7d9e82aed5e79659800458b57/TELUS_TAGLINE_HORIZONTAL_EN.svg)](https://www.telus.com/en/)
 
 ##### [Framework documentation](https://github.com/telus/telus-bdd-docs)
 
-In this section you will what is database bootstrap and when it can be used.
+In this section you will learn what is database bootstrap and when it can be used.
 
 <img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/23.Videos-512.png" width="30px" margin-top="15px"/> [Session video recording]()
 
@@ -30,7 +30,7 @@ Here `@status_code` is a parameter from DB provided by database bootstrap.
 
 The mechanism is quite simple:
 - User configures database bootstrap in a prescripted way
-- User binds particular bootstrap configuration to a feture file
+- User binds particular bootstrap configuration to a feature file
 - When this feature file id launched, the framework runs an according to bound bootstrap SQL query and populates query result to the framework process environment
 - This data is accessed in step definitions.
 
@@ -93,7 +93,7 @@ module.exports = {
 ```
 We will set "lock flag" to true, to indicate that a dataset is currently under test, to do this we would need to update a row in DB, but in the same time we need to get the data back, that's why the following syntax is used. It totally eliminates the possibility of the dataset being tested paralelly in several threads, or several servers connected to one DB even if requests come simultaneously (because as you can see by `WHERE` part, only not testing rows can be obtained and the set of "lock flag" happens immediately).
 
-Also as you can see there is always only one row returned from the bootstrap (`LIMIT 1`). This helps to isolate the execution, ecah test and its dataset have dedicated process with own environmet with such aproach. So we strongly recommend to do this and to write your steps logic to process one dataset at a time. 
+Also as you can see there is always only one row returned from the bootstrap (`LIMIT 1`). This helps to isolate the execution, each test and its dataset have dedicated process with own environmet with such approach. So we strongly recommend to do this and to write your steps logic to process one dataset at a time. 
 
 > Note: Nevertheless, it is even possbile to obtain the whole table with one query and write steps, so they would process multiple parameter values.
 
@@ -120,7 +120,7 @@ Tag parameters are parameters used to provide some metadata about a feature file
 
 There are actually 3 of them related to bootstrap:
 - `@DBbootstrap` - alias
-- `@runTimes` - number of times feature file wouldb be ran, in other words how many datasets would be processed (with the recommended approach one query - one row)
+- `@runTimes` - number of times feature file would be ran, in other words how many datasets would be processed (with the recommended approach one query - one row)
 - `@DBbootstrapParams` - JSON object string (without any spaces!!!) of parameters that are passed to `params` argument of DB bootstrap function. 
 By default framework puts two parameters into this argument:
     - `bddEnv` - value of passed environment, if specified (with `--bddEnv` argument in cli)

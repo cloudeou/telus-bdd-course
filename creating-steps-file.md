@@ -28,7 +28,7 @@ Steps (aka action words) are the building blocks of scenarios and feture files. 
         - Scenario
             - Step 
 
-Each step represents a reusable piece of logic wether it is some action, condtition or precondition. Behind each step there is a real Node.js function that executes this logic based on argument values and context.
+Each step represents a reusable piece of logic whether it is some action, condtition or precondition. Behind each step there is a real Node.js function that executes this logic based on argument values and context.
 
 BDD step has a simple structure which includes:
 - Keyword
@@ -54,13 +54,13 @@ As a best practice naming of feature files should follow the next convention:
 
 In our example `PI.setps.ts`.
 #### **Steps container and steps creation code requirements**
-Inside of a steps file it is required tto create a special container-function with the following syntax(from example):
+Inside of a steps file it is required to create a special container-function with the following syntax(from example):
 ```typescript
 export const PISteps: StepDefinitions = ({ given, and, when, then }) => {
     // ...
 }
 ```
-So it`s a function, which takes four keyword functions as argument and does not return anything (void). Inside of this function step definitions are implemented by calling keyword functions. And it is exported from the file.
+So it's a function, which takes four keyword functions as argument and does not return anything (void). Inside of this function step definitions are implemented by calling keyword functions. And it is exported from the file.
 
 All of the other code as creation of service class instances, contexts instances creation should be inside of a container-function before declaring steps (e.g.):
 ```typescript
@@ -91,7 +91,7 @@ and(/^set customer (.*): (.*)$/, (paramName, paramValue) => {
 > Note: 
 > 
 > Keyword function usage does not allways must be simillar to BDD step keyword to be used in feature files. For example:
-> - `when()` step defibition can be used with `When` or `Then` BDD keywords in a feature file
+> - `when()` step definition can be used with `When` or `Then` BDD keywords in a feature file
 > - `and()` step definition can be used with all BDD keywords(`Given`, `When`, `Then`, `And`) in a feature file
 > - all step definitions can be used with `And` BDD keyword in a feature file.
 >
@@ -114,7 +114,7 @@ Step definitions can and should be parametrized. The more parameetrized the step
 
 >Note:
 >
-> But there are cases when it is better to create separate step definitions instead of parametrizing one. For example when there is a big conditional logic depending on a parameter in callback unction, it may theoretically slow down the code, because conditional code would run every time. 
+> But there are cases when it is better to create separate step definitions instead of parametrizing one. For example when there is a big conditional logic depending on a parameter in callback function, it may theoretically slow down the code, because conditional code would run every time. 
 
 String step-matcher can be parametrized in only one way, parameter value goes in the end of the step
 
@@ -181,14 +181,14 @@ and(/^response should be valid by schemas (.*):$/, (schemasTable: any) => {
 Tables can have any number of columns and table structure is very clear to read in a feature file, so if you have a complex parametres structure it is better to use table. 
 #### **Steps index file**
 Steps index file is located in the same folder as step files `./bdd/steps/index.ts`. 
-It is main and only function is to controll which step definitions are loaded to the framework. It is usefull when you temporarily do not need some steps, there is no sence to load them to the framework or for testing.
+It is main and only function is to control which step definitions are loaded to the framework. It is usefull when you temporarily do not need some steps, there is no sence to load them to the framework or for testing.
 Steps index basically is a standard index file of a javascript module file and looks like this:
 ```typescript
 import { PISteps } from "./PI.steps";
 
 export default [PISteps];
 ```  
-Particlularly by adding or removing step definitions from exported array you controlled wether they are or are not loaded to the framework.
+Particlularly by adding or removing step definitions from exported array you controlled whether they are or are not loaded to the framework.
 
 
 
