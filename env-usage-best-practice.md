@@ -72,7 +72,7 @@ And this would quite work, but there are couple of problems:
 - feature file must be modified to change environment each time. or copies of this file should be created with different param values
 - all of the steps would need to receive such parameter, or separate given step should be created, which will also result in unnecessary field in context.
 
-There are other ways to solve this problem, some are better, some are worth, this is why we have created a native support for environemtns in our framework and developed an approach, tested in many projects, to process multiple environments.
+There are other ways to solve this problem, some are better, some are worse, this is why we have created a native support for environemtns in our framework and developed an approach, tested in many projects, to process multiple environments.
 
 #### **Framework CLI parameter for env**
 
