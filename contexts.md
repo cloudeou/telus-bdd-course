@@ -57,7 +57,7 @@ Other code and design is up to you, you can implement your contexts as you would
 #### **Class structure best practice (accessors, map only)**
 As a best practice we recommend using two approaches:
 1. Getter/setter approach requires a considerable amount of code in context class, but creates convenient interface for development and support, where you would get hints on context data points names and data types, this will also help to reduce errors before execution.
-In this approach each context data point is implemented with public field or private field and getter and setter methods if you want to add some additional logic(e.g. validation) for the data point or if you'd kust like to do it like this.
+In this approach each context data point is implemented with public field or private field and getter and setter methods if you want to add some additional logic(e.g. validation) for the data point or if you'd just like to do it like this.
 ```typescript
 export default class PIContext {
   public identificator = Identificators.PIContext;
@@ -99,7 +99,7 @@ To access contexts in step files you should use a special built in util `feature
 const { featureContext } = require("@telus-bdd/telus-bdd");
 import { Identificators } from "../contexts/Identificators";
 ```
-2. **INSIDE OF** steps container function, create a function that will call the utils `getContextById` method to fetch context from the framework y its id:
+2. **INSIDE OF** steps container function, create a function that will call the utils `getContextById` method to fetch context from the framework by its id:
 ```typescript
 export const PISteps: StepDefinitions = ({ given, and, when, then }) => {
   const PIContext = (): PIContext =>
