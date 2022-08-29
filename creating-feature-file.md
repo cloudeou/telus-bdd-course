@@ -23,7 +23,7 @@ Feature file is
 - the most high-level file in BDD framework
 - used as an input for the framework
 - the place where you can modify and parametrize automation flow
-- just a text file with `.feature` exntention, written in *Gherkin* language
+- just a text file with `.feature` extention, written in *Gherkin* language
 - not an executable file but just a config file that can be consumed by BDD framework, which will execute described flow, that is also why changing features does not require any rebuilds or reboots of the deployment.
 
 #### **Feature file structure**
@@ -64,7 +64,7 @@ Feature file parts are:
     Title of the scenario, it is used in logs and results.
 - *steps*
 
-    Steps (action words) are the building blocks of feature files, automation flows are described with them, action words correspond to real javascript functions that are executed in runtime.
+    Steps (action words) are the building blocks of feature files, automation flows are described with them, action words correspond to real javascript functions that are being executed at runtime.
     Action words start from *key words (Given, When, Then, And)*.
     Action words can be parametrized in two ways with a single parameter and with a table.
 
@@ -82,20 +82,20 @@ Feature file parts are:
 
 #### **Identification tags and their usage best practice**
 
-Identification tags are a very important part of the feature file, they allow to specify which featurs need to be launched.
+Identification tags are a very important part of the feature file, they allow to specify which features need to be launched.
 
 Identification has 3 levels, from the general, to the specific. You can think of these levels as:
 - 1st level - class 
 - 2nd level - sub-class
 - 3rd level - element (must be unique)
 
-For example in a BDD project you may have featurs used for **test automation**, among them are **ui tests** and **api tests**, and you have test cases **test1** and **test2**. Then your identification tags would look like this:
+For example in a BDD project you may have features used for **test automation**, among them are **ui tests** and **api tests**, and you have test cases **test1** and **test2**. Then your identification tags would look like this:
 ```gherkin
 @test-automation
 @ui-tests # or @api-tests
 @test1 # or @test2
 ```
-It is recommended as good practice to have `features` directory inner structure to correspond to your identificcation tags, for our example:
+It is recommended as a good practice to have `features` directory inner structure to correspond to your identificcation tags, for our example:
 ```
 └───features
     └───test-automation
